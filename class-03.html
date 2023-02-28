@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family:  'Quicksand', sans-serif;
+        }
+        :root{
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-blue: #acd8d9;
+            --dark: #232830;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 40px;
+            justify-self: center;
+            display: none;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        .form a{
+            color: var(--hospital-blue);
+            font-size: var(--sm);
+            text-decoration: none;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 28px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+        .input-mail{
+            margin-bottom: 22px;
+        }
+        .primary-button{
+            background-color: var(--hospital-blue);
+            border: none;
+            border-radius: 10px;
+            color: var(--white);
+            font-weight: bolder;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            height: 50px;
+        }
+        .second-button{
+            background-color: var(--white);
+            border: 2px solid var(--hospital-blue);
+            color: var(--hospital-blue);
+            border-radius: 10px;
+            width: 100%;
+            font-weight: bolder;
+            font-size: var(--md);
+            height: 50px;
+            cursor: pointer;
+        }
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px){
+            .logo{
+                display: block;
+            }
+            .second-button{
+                position: relative;
+                top: 80px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./logos/logo_yard_sale.svg" alt="Logo" class="logo">
+
+            <form action="" class="form">
+                <label for="email" class="label">Dirección de correo</label>
+                <input type="text" id="email" class="input input-mail" placeholder="ejemplo@algo.com">
+
+                <label for="password" class="label">Contraseña</label>
+                <input type="password" id="password" class="input input-pass" placeholder="********">
+
+                <input type="submit" value="Ingresar" class="primary-button login-button">
+                <a href="">Olvide mi contraseña</a>
+            </form>
+            <button class="second-button registro">Registrar</button>
+        </div>
+    </div>
+</body>
+</html>

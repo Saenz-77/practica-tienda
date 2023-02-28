@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+         body{
+            margin: 0;
+            font-family:  'Quicksand', sans-serif;
+        }
+        :root{
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-blue: #acd8d9;
+            --dark: #232830;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu{
+            display: none;
+        }
+        .naveg{
+            display: flex;
+        }
+        .naveg ul li a{
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 2px solid var(--white);
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .naveg ul li a:hover{
+            border: 2px solid var(--hospital-blue);
+            color: var(--hospital-blue);
+        }
+        .naveg ul{
+            margin-left: 12px !important;
+        }
+        .logo{
+            width: 100px;
+        }
+        .naveg ul, .nav-end ul{
+            list-style-type: none;
+            margin-top: 32px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        .nav-end{
+            display: flex;
+        }
+        .nav-mail{
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-right: 12px;
+
+        }
+        .desplegable{
+            margin-left: 10px;
+            transform: rotate(90deg);    
+            margin: 0 20px;
+        }
+        .nav-car{
+            position: relative;
+        }
+        .nav-car div{
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital-blue);
+            border-radius: 50%;
+            text-align: center;
+            font-weight: bold;
+            font-size: var(--sm);
+            position: absolute;
+            top: -10px;
+            right: -6px;
+        }
+        @media (max-width: 640px){
+            .menu{
+                display: block;
+            }
+            .naveg ul{
+                display: none;
+            }
+            .nav-mail{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+        <div class="naveg">
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <ul>
+                <li>
+                    <a href="">Todos</a>
+                </li>
+                <li>
+                    <a href="">Prendas</a>
+                </li>
+                <li>
+                    <a href="">Electronico</a>
+                </li>
+                <li>
+                    <a href="">Mobiliario</a>
+                </li>
+                <li>
+                    <a href="">Juguetes</a>
+                </li>
+                <li>
+                    <a href="">Otros</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-end">
+            <ul>
+                <li class="nav-mail">innogital@gmail.com</li>
+                <li class="desplegable"><img src="./icons/flechita.svg" alt=""></li>
+                <li class="nav-car">
+                    <img src="./icons/icon_shopping_cart.svg" alt="Carrito">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
