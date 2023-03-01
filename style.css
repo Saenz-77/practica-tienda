@@ -1,3 +1,4 @@
+/*-------------------- CLASS 11 --------------------*/
 body{
     margin: 0;
     font-family:  'Quicksand', sans-serif;
@@ -19,7 +20,7 @@ nav{
     padding: 0 25px;
     border-bottom: 1px solid var(--very-light-pink);
 }
-.menu{
+.menu-principal{
     display: none;
 }
 .naveg{
@@ -80,18 +81,6 @@ nav{
     top: -10px;
     right: -6px;
 }
-@media (max-width: 640px){
-    .menu{
-        display: block;
-    }
-    .naveg ul{
-        display: none;
-    }
-    .nav-mail{
-        display: none;
-    }
-}
-
 /*-------------------- CLASS 07 --------------------*/
 .menu-desk{
     width: 100px;
@@ -132,4 +121,165 @@ nav{
 }
 .inactive{
     display: none;
+}
+
+/*-------------------- CLASS 08 --------------------*/
+div .mobile{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+.mobile{
+    position: absolute;
+    top: 60px;
+}
+.mobile a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.mobile ul{
+    padding: 0;
+    margin: 25px 0 0;
+    list-style: none;
+
+}
+.mobile ul:nth-child(1){
+    border-bottom: 1px solid var(--very-light-pink);
+    margin-top: 0;
+}
+.mobile ul:last-child{
+    margin-bottom: 21px;
+}
+.mobile ul li{
+    margin: 25px;
+}
+.mobile .mail{
+    font-size: var(--sm);
+    font-weight: 300;
+}
+.mobile .sign-out{
+    color: var(--hospital-blue);
+    font-size: var(--sm);
+}
+
+/*-------------------- CLASS 13 --------------------*/
+.products {
+    width: 360px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+}
+.order{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.order-site{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.title{
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.title-arrow{
+    display: flex;
+}
+.title-arrow img{
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+.order-content{
+    display: flex;
+    flex-direction: column;
+}
+.order-content p span:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+}
+.order-content p span:nth-child(2){
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+.content{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 16px;
+}
+.content p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.content p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.content p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+}
+.shop-car{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.shop-car figure{
+    margin: 0;
+}
+.shop-car figure img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.shop-car p:nth-child(2){
+    color: var(--very-light-pink);
+}
+.shop-car p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.primary{
+    background-color: var(--hospital-blue);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: bolder;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    height: 50px;
+}
+
+
+@media (max-width: 640px){
+    .menu-principal{
+        display: block;
+    }
+    .naveg ul, .nav-mail, .menu-desk{
+        display: none;
+    }
+    .products{
+        width: 100%;
+    }
+}
+@media (min-width: 641px){
+    .mobile{
+        display: none;
+    }
 }
