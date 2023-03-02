@@ -1,4 +1,4 @@
-/*-------------------- CLASS 11 --------------------*/
+/*-------------------- CLASS 11 nav--------------------*/
 body{
     margin: 0;
     font-family:  'Quicksand', sans-serif;
@@ -81,7 +81,7 @@ nav{
     top: -10px;
     right: -6px;
 }
-/*-------------------- CLASS 07 --------------------*/
+/*-------------------- CLASS 07 menu-desk--------------------*/
 .menu-desk{
     width: 100px;
     height: auto;
@@ -123,7 +123,7 @@ nav{
     display: none;
 }
 
-/*-------------------- CLASS 08 --------------------*/
+/*-------------------- CLASS 08 hambur mobile menu . --------------------*/
 div .mobile{
     padding: 25px;
     display: flex;
@@ -132,8 +132,11 @@ div .mobile{
     height: 100vh;
 }
 .mobile{
+    background-color: var(--white);
     position: absolute;
     top: 60px;
+    left: 0;
+    width: 100%;
 }
 .mobile a{
     text-decoration: none;
@@ -166,8 +169,9 @@ div .mobile{
     font-size: var(--sm);
 }
 
-/*-------------------- CLASS 13 --------------------*/
+/*-------------------- CLASS 13 product (carrito)--------------------*/
 .products {
+    background-color: var(--white);
     width: 360px;
     padding: 0 24px;
     box-sizing: border-box;
@@ -266,7 +270,7 @@ div .mobile{
     height: 50px;
 }
 
-/*-------------------- CLASS 06 --------------------*/
+/*-------------------- CLASS 06 product (central)--------------------*/
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
@@ -309,6 +313,73 @@ div .mobile{
     margin-bottom: 0px;
 }
 
+/*-------------------- CLASS 12 product (información)--------------------*/
+
+.product-detail{
+    position: absolute;
+    right: 0;
+    width: 360px;
+    padding-bottom: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.product-detail > img:nth-child(2){
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 0 5% 5%;
+}
+.product-close{
+    background-color: var(--white);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    padding: 12px;
+    border-radius: 50%;
+}
+.product-close:hover{
+    cursor: pointer;
+}
+.txt-info{
+    margin: 24px 24px 0 24px;
+}
+.txt-info p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.txt-info p:nth-child(2){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--very-light-pink);
+}
+.txt-info p:nth-child(3){
+    font-weight: bold;
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--dark);
+}
+.primary{
+    background-color: var(--hospital-blue);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: bolder;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    height: 50px;
+}
+.carrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*-------------------- MEDIAS QUERY'S --------------------*/
 
 @media (max-width: 640px){
@@ -318,7 +389,7 @@ div .mobile{
     .naveg ul, .nav-mail, .menu-desk{
         display: none;
     }
-    .products{
+    .product{
         width: 100%;
     }
     .cards{
@@ -328,6 +399,9 @@ div .mobile{
         width: 140px;
     }
     .product img{
+        width: 100%;
+    }
+    .product-detail{
         width: 100%;
     }
 }
