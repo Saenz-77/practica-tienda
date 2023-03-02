@@ -266,6 +266,50 @@ div .mobile{
     height: 50px;
 }
 
+/*-------------------- CLASS 06 --------------------*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 26px;
+    place-content: center;
+    padding-top: 20px;
+}
+.product{
+    width: 240px;
+}
+.product img{
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 1px solid var(--very-light-pink);
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.info figure{
+    margin: 0;
+}
+.info figure img{
+    width: 35px;
+    height: 35px;
+}
+.info div p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+.info div p:nth-child(2){
+    font-weight: bold;
+    font-size: var(--sm);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*-------------------- MEDIAS QUERY'S --------------------*/
 
 @media (max-width: 640px){
     .menu-principal{
@@ -275,6 +319,15 @@ div .mobile{
         display: none;
     }
     .products{
+        width: 100%;
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fill, 150px);
+    }
+    .product{
+        width: 140px;
+    }
+    .product img{
         width: 100%;
     }
 }
