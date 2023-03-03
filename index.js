@@ -4,19 +4,25 @@ const menuHambur = document.querySelector('.menu-principal');
 const mobile = document.querySelector('.mobile');
 const navCar = document.querySelector('.nav-car');
 const products = document.querySelector('.products');
+const productDetail = document.querySelector('.product-detail');
+const productClose = document.querySelector('.product-close');
 const cards = document.querySelector('.cards');
 
 displayEmail.addEventListener('click', manejarMenu);
 menuHambur.addEventListener('click', menuMobile);
 navCar.addEventListener('click', menuProducts);
+productClose.addEventListener('click', closeProduct);
 
 function manejarMenu(){
+    closeProduct();
     const isProductsClosed = products.classList.contains('.inactive');
 
     if (!isProductsClosed){
         products.classList.add('inactive');
     }
+    
     menuDesk.classList.toggle('inactive');
+    
 }
 
 function menuMobile(){
@@ -26,12 +32,19 @@ function menuMobile(){
         products.classList.add('inactive');
     }
     mobile.classList.toggle('inactive');
+
+    closeProduct();
 }
 
 function menuProducts(){
     const isMobileMenuClosed = mobile.classList.contains('.inactive');
     const isMenuEmailClosed = menuDesk.classList.contains('inactive');
 
+    const isProductDetailClosed = productDetail.classList.contains('inactive');
+
+    if (!isProductDetailClosed){
+        productDetail.classList.add('inactive');
+    }
 
     if (!isMobileMenuClosed){
         mobile.classList.add('inactive');
@@ -41,6 +54,18 @@ function menuProducts(){
     }
     
     products.classList.toggle('inactive');
+}
+
+function openProductDetail(){
+    products.classList.add('inactive')
+
+    productDetail.classList.remove('inactive')
+
+    menuDesk.classList.add('inactive')
+}
+
+function closeProduct(){
+    productDetail.classList.add('inactive');
 }
 
 const productsList = [];
@@ -62,6 +87,7 @@ function renderProducts(arr){
 
         const img = document.createElement('img');
         img.setAttribute('src', productos.img);
+        img.addEventListener('click', openProductDetail);
 
         const info = document.createElement('div');
         info.classList.add('info');

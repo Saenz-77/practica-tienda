@@ -280,6 +280,7 @@ div .mobile{
 }
 .product{
     width: 240px;
+    background-color: var(--white);
 }
 .product img{
     width: 100%;
@@ -322,6 +323,7 @@ div .mobile{
     padding-bottom: 24px;
     object-fit: cover;
     border-radius: 50%;
+    background-color: var(--white);
 }
 .product-detail > img:nth-child(2){
     width: 100%;
