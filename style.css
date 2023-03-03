@@ -91,7 +91,7 @@ nav{
     background-color: var(--white);
     position: absolute;
     top: 60px;
-    right: 0;
+    right: 105px;
 }
 .menu-desk ul{
     list-style: none;
@@ -273,10 +273,10 @@ div .mobile{
 /*-------------------- CLASS 06 product (central)--------------------*/
 .cards{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, 240px);
     gap: 26px;
     place-content: center;
-    padding-top: 20px;
+    padding: 20px 10px 0 10px;
 }
 .product{
     width: 240px;
@@ -286,7 +286,6 @@ div .mobile{
     width: 100%;
     border-radius: 15px;
     object-fit: cover;
-    border: 1px solid var(--very-light-pink);
 }
 .info{
     display: flex;
@@ -336,7 +335,7 @@ div .mobile{
     top: 10px;
     left: 10px;
     z-index: 2;
-    padding: 12px;
+    padding: 7px 10px;
     border-radius: 50%;
 }
 .product-close:hover{
@@ -383,6 +382,11 @@ div .mobile{
 }
 
 /*-------------------- MEDIAS QUERY'S --------------------*/
+@media (max-width: 860px){
+    .pantalla-media{
+        display: none;
+    }
+}
 
 @media (max-width: 640px){
     .menu-principal{

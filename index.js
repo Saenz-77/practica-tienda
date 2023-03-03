@@ -79,6 +79,17 @@ productsList.push({
     price: '100.000',
     img: './logos/innogital.png'
 })
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
+
 
 function renderProducts(arr){
     for (productos of arr){
