@@ -2,15 +2,19 @@ const displayEmail = document.querySelector('.nav-mail');
 const menuDesk = document.querySelector('.menu-desk');
 const menuHambur = document.querySelector('.menu-principal');
 const mobile = document.querySelector('.mobile');
+const flechita = document.querySelector('.desplegable');
 const navCar = document.querySelector('.nav-car');
 const products = document.querySelector('.products');
+const flechaPedido = document.querySelector('.flecha-pedido');
 const productDetail = document.querySelector('.product-detail');
 const productClose = document.querySelector('.product-close');
 const cards = document.querySelector('.cards');
 
 displayEmail.addEventListener('click', manejarMenu);
 menuHambur.addEventListener('click', menuMobile);
+flechita.addEventListener('click', menuProducts);
 navCar.addEventListener('click', menuProducts);
+flechaPedido.addEventListener('click', menuProducts)
 productClose.addEventListener('click', closeProduct);
 
 function manejarMenu(){
@@ -89,6 +93,36 @@ productsList.push({
     price: '100.000',
     img: './logos/innogital.png'
 })
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
+productsList.push({
+    name: 'articulo',
+    price: '100.000',
+    img: './logos/innogital.png'
+})
 
 
 function renderProducts(arr){
@@ -98,6 +132,7 @@ function renderProducts(arr){
 
         const img = document.createElement('img');
         img.setAttribute('src', productos.img);
+        img.classList.add('manito');
         img.addEventListener('click', openProductDetail);
 
         const info = document.createElement('div');
@@ -115,7 +150,8 @@ function renderProducts(arr){
         const figure = document.createElement('figure');
         const imgCar = document.createElement('img');
         imgCar.setAttribute('src', './icons/bt_add_to_cart.svg');
-        
+        imgCar.classList.add('manito');
+
         productDiv.append(productCost, productName);
         figure.appendChild(imgCar);
         info.appendChild(productDiv);
